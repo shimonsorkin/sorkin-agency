@@ -2,7 +2,7 @@ import { TestimonialSlider, type Testimonial } from "@/components/ui/testimonial
 
 const testimonials: Testimonial[] = [
   {
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/navalny.webp",
     quote:
       "Shimon's strategic guidance transformed our YouTube presence completely. His deep understanding of the platform and audience engagement helped us grow from 10K to 100K subscribers in under a year. He genuinely cares about mission-driven work.",
     name: "Alexei Navalny",
