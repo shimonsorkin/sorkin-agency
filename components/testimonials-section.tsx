@@ -5,8 +5,8 @@ const testimonials: Testimonial[] = [
     image: "/placeholder.svg?height=400&width=400",
     quote:
       "Shimon's strategic guidance transformed our YouTube presence completely. His deep understanding of the platform and audience engagement helped us grow from 10K to 100K subscribers in under a year. He genuinely cares about mission-driven work.",
-    name: "Rachel Goldman",
-    role: "Director of Digital, International News Outlet",
+    name: "Alexei Navalny",
+    role: "Russian opposition leader, anti-corruption activist, and the most prominent critic of President Vladimir Putin who died in prison in February 2024",
     rating: 5,
   },
   {
