@@ -9,22 +9,31 @@ export function YouTubeGallerySection() {
   const [isPaused, setIsPaused] = useState(false)
 
   const scroll = (direction: "left" | "right") => {
-    if (scrollContainerRef.current) {
-      const container = scrollContainerRef.current
-      const scrollAmount = 850 // Scroll roughly two cards at a time
-      const currentScroll = container.scrollLeft
-      const maxScroll = container.scrollWidth - container.clientWidth
+    if (!scrollContainerRef.current) return
+    const container = scrollContainerRef.current
+    const scrollAmount = 850
+    // Exact width of one set + the gap before set 2 (ml-6 = 24px)
+    const set1 = (container.firstElementChild as HTMLElement).children[0] as HTMLElement
+    const oneSetWidth = set1.offsetWidth + 24
 
-      if (direction === "right" && currentScroll >= maxScroll - 10) {
-        container.scrollTo({ left: 0, behavior: "smooth" })
-      } else if (direction === "left" && currentScroll <= 10) {
-        container.scrollTo({ left: maxScroll, behavior: "smooth" })
-      } else {
-        const targetScroll = direction === "left"
-          ? currentScroll - scrollAmount
-          : currentScroll + scrollAmount
-        container.scrollTo({ left: targetScroll, behavior: "smooth" })
+    if (direction === "right") {
+      // If we've scrolled into set 2, silently jump back to the same position in set 1
+      if (container.scrollLeft >= oneSetWidth) {
+        container.scrollLeft -= oneSetWidth
       }
+      container.scrollTo({
+        left: container.scrollLeft + scrollAmount,
+        behavior: "smooth",
+      })
+    } else {
+      // If near the start of set 1, silently jump to the same position in set 2
+      if (container.scrollLeft < scrollAmount) {
+        container.scrollLeft += oneSetWidth
+      }
+      container.scrollTo({
+        left: container.scrollLeft - scrollAmount,
+        behavior: "smooth",
+      })
     }
   }
 

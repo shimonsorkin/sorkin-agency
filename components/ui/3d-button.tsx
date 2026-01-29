@@ -26,6 +26,7 @@ const buttonVariants = cva(
         ghost_destructive: "bg-transparent text-red-500 hover:bg-red-100",
         link: "text-primary underline-offset-4 hover:underline",
         solid: "bg-zinc-800 text-white hover:bg-zinc-700",
+        glass: "btn-liquid-glass text-white border-none",
       },
       size: {
         default: "h-10 px-4 py-2",

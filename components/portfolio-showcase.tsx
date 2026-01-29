@@ -27,7 +27,7 @@ export function PortfolioShowcase() {
           {portfolioItems.map((item, index) => (
             <div key={`set1-${index}`} className="flex-shrink-0 w-[600px]">
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
-                <img src={item.image || "/placeholder.svg"} alt="" className="w-full h-full object-cover" />
+                <img src={item.image || "/placeholder.svg"} alt="" className="w-full h-full object-cover grayscale" />
               </div>
             </div>
           ))}
@@ -37,7 +37,7 @@ export function PortfolioShowcase() {
           {portfolioItems.map((item, index) => (
             <div key={`set2-${index}`} className="flex-shrink-0 w-[600px]">
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
-                <img src={item.image || "/placeholder.svg"} alt="" className="w-full h-full object-cover" />
+                <img src={item.image || "/placeholder.svg"} alt="" className="w-full h-full object-cover grayscale" />
               </div>
             </div>
           ))}
