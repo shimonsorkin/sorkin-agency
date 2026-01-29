@@ -83,11 +83,11 @@ export const TestimonialSlider = ({ testimonials, className }: TestimonialSlider
           >
             <div className="flex flex-col md:flex-row items-center justify-center w-full h-full p-4">
               {/* Image Section */}
-              <div className="relative w-48 h-48 md:w-64 md:h-64 flex-shrink-0 mb-4 md:mb-0 md:mr-[-4rem] z-10">
+              <div className="relative w-48 h-48 md:w-64 md:h-64 flex-shrink-0 mb-4 md:mb-0 md:mr-[-4rem] z-10 group">
                 <img
                   src={currentTestimonial.image || "/placeholder.svg"}
                   alt={currentTestimonial.name}
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
+                  className="w-full h-full object-cover rounded-2xl shadow-lg grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
               </div>
 
