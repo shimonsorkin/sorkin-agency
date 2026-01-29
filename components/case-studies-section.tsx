@@ -30,7 +30,7 @@ export function CaseStudiesSection() {
       project: "Digital Transformation",
       metric: "200K new subscribers",
       description: "Led comprehensive digital communications overhaul, establishing presence across YouTube, social platforms, and newsletter channels.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/channels4_profile (7).jpg",
     },
   ]
 
