@@ -6,7 +6,7 @@ const testimonials: Testimonial[] = [
     quote:
       "Shimon's strategic guidance transformed our YouTube presence completely. His deep understanding of the platform and audience engagement helped us grow from 10K to 100K subscribers in under a year. He genuinely cares about mission-driven work.",
     name: "Alexei Navalny",
-    role: "Russian opposition leader, anti-corruption activist, and the most prominent critic of President Vladimir Putin who died in prison in February 2024",
+    role: "Russian opposition leader and the most prominent critic of President Vladimir Putin",
     rating: 5,
   },
   {
