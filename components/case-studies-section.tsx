@@ -16,7 +16,7 @@ export function CaseStudiesSection() {
       project: "Social Media Revamp",
       metric: "3x engagement rate",
       description: "Created multi-platform social media strategy that tripled engagement and significantly increased donation conversions.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/channels4_profile (5).jpg",
     },
     {
       client: "Educational Foundation",
