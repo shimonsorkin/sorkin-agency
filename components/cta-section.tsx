@@ -5,12 +5,6 @@ import { IconArrowRight } from "@tabler/icons-react"
 import { Play } from "lucide-react"
 import { motion } from "framer-motion"
 
-declare global {
-  interface Window {
-    Calendly: any;
-  }
-}
-
 export function CTASection() {
   return (
     <section className="py-24 px-6 bg-secondary">
@@ -68,12 +62,8 @@ export function CTASection() {
                 size="lg"
                 className="rounded-full"
                 leadingIcon={IconArrowRight}
-                onClick={() => {
-                  if (typeof window !== 'undefined' && window.Calendly) {
-                    window.Calendly.initPopupWidget({url: 'https://calendly.com/shimonsorkin/30min'});
-                  }
-                  return false;
-                }}
+                data-cal-link="shimon-sorkin-zh2q7b/30min"
+                data-cal-config='{"layout":"month_view"}'
               >
                 Schedule a Consultation
               </Button>

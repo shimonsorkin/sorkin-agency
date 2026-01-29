@@ -4,12 +4,6 @@ import { Button } from "@/components/ui/3d-button"
 import { Play } from "lucide-react"
 import { motion } from "framer-motion"
 
-declare global {
-  interface Window {
-    Calendly: any;
-  }
-}
-
 export function Hero() {
   return (
     <section className="pt-32 pb-12 px-6">
@@ -62,12 +56,8 @@ export function Hero() {
           <Button
             size="lg"
             className="rounded-full px-8 text-base"
-            onClick={() => {
-              if (typeof window !== 'undefined' && window.Calendly) {
-                window.Calendly.initPopupWidget({url: 'https://calendly.com/shimonsorkin/30min'});
-              }
-              return false;
-            }}
+            data-cal-link="shimon-sorkin-zh2q7b/30min"
+            data-cal-config='{"layout":"month_view"}'
           >
             Schedule a Consultation
           </Button>

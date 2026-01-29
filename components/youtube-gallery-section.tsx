@@ -552,8 +552,8 @@ export function YouTubeGallerySection() {
   const sortedVideos = [...videos].sort((a, b) => parseViews(b.views) - parseViews(a.views))
 
   return (
-    <section className="py-20 px-6 bg-background">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-20 bg-background">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
           {/* Stats Grid */}
@@ -605,19 +605,20 @@ export function YouTubeGallerySection() {
             In May 2022, I pitched a weekly political analysis show, got a yes, and built it from scratch — hosting and producing every episode for eight months.
           </motion.p>
         </div>
+      </div>
 
         {/* Auto-scrolling Gallery */}
         <div className="relative">
           {/* Navigation Buttons */}
           <button
             onClick={() => scroll("left")}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background/90 border-2 border-border hover:border-accent shadow-lg flex items-center justify-center transition-all hover:scale-110"
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background/90 border-2 border-border hover:border-accent shadow-lg flex items-center justify-center transition-all hover:scale-110"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={() => scroll("right")}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background/90 border-2 border-border hover:border-accent shadow-lg flex items-center justify-center transition-all hover:scale-110"
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background/90 border-2 border-border hover:border-accent shadow-lg flex items-center justify-center transition-all hover:scale-110"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
@@ -759,7 +760,6 @@ export function YouTubeGallerySection() {
             </div>
           </div>
         </div>
-      </div>
     </section>
   )
 }

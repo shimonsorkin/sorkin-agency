@@ -3,14 +3,17 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/3d-button"
 import { Play } from "lucide-react"
-
-declare global {
-  interface Window {
-    Calendly: any;
-  }
-}
+import { useEffect } from "react"
+import { getCalApi } from "@calcom/embed-react"
 
 export function Header() {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi()
+      cal("ui", { hideEventTypeDetails: false, layout: "month_view" })
+    })()
+  }, [])
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-6 py-4">
@@ -41,12 +44,8 @@ export function Header() {
           {/* CTA Button */}
           <Button
             className="rounded-full px-6"
-            onClick={() => {
-              if (typeof window !== 'undefined' && window.Calendly) {
-                window.Calendly.initPopupWidget({url: 'https://calendly.com/shimonsorkin/30min'});
-              }
-              return false;
-            }}
+            data-cal-link="shimon-sorkin-zh2q7b/30min"
+            data-cal-config='{"layout":"month_view"}'
           >
             Schedule a Consultation
           </Button>
