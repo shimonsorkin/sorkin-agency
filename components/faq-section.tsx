@@ -5,7 +5,7 @@ import { IconChevronDown } from "@tabler/icons-react"
 import { motion } from "framer-motion"
 
 export function FAQSection() {
-  const [openIndexes, setOpenIndexes] = useState<number[]>([0])
+  const [openIndexes, setOpenIndexes] = useState<number[]>([])
 
   const toggleQuestion = (index: number) => {
     setOpenIndexes((prev) =>

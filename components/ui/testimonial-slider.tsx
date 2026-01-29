@@ -81,9 +81,9 @@ export const TestimonialSlider = ({ testimonials, className }: TestimonialSlider
             exit="exit"
             className="absolute w-full h-full"
           >
-            <div className="flex flex-col md:flex-row items-center justify-center w-full h-full p-4">
+            <div className="flex flex-col md:flex-row md:items-stretch items-center justify-center w-full h-full p-4">
               {/* Image Section */}
-              <div className="relative w-48 h-48 md:w-64 md:h-64 flex-shrink-0 mb-4 md:mb-0 md:mr-[-4rem] z-10 group">
+              <div className="relative w-48 h-48 md:w-64 md:h-auto flex-shrink-0 mb-4 md:mb-0 md:mr-[-4rem] z-10 group">
                 <img
                   src={currentTestimonial.image || "/placeholder.svg"}
                   alt={currentTestimonial.name}

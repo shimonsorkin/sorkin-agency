@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import { Button } from "@/components/ui/3d-button"
-import { Play } from "lucide-react"
 import { useEffect } from "react"
 import { getCalApi } from "@calcom/embed-react"
 
@@ -20,10 +19,8 @@ export function Header() {
         <div className="relative flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 text-xl font-semibold">
-            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[rgba(10,10,10,0.14673913043478262)]">
-              <Play className="w-4 h-4 text-accent" />
-            </span>
-            <span className="font-serif">Sorkin Agency</span>
+            <img src="/sorkin-logo.svg" alt="Sorkin Agency" className="w-7 h-8" />
+            <span>Sorkin Agency</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">

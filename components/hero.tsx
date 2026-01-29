@@ -1,7 +1,6 @@
 "use client"
 
 import { Button } from "@/components/ui/3d-button"
-import { Play } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function Hero() {

@@ -10,16 +10,21 @@ export function YouTubeGallerySection() {
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
-      const scrollAmount = 70 // Much slower scroll - about 6x slower than original
-      const currentScroll = scrollContainerRef.current.scrollLeft
-      const targetScroll = direction === "left"
-        ? currentScroll - scrollAmount
-        : currentScroll + scrollAmount
+      const container = scrollContainerRef.current
+      const scrollAmount = 850 // Scroll roughly two cards at a time
+      const currentScroll = container.scrollLeft
+      const maxScroll = container.scrollWidth - container.clientWidth
 
-      scrollContainerRef.current.scrollTo({
-        left: targetScroll,
-        behavior: "smooth"
-      })
+      if (direction === "right" && currentScroll >= maxScroll - 10) {
+        container.scrollTo({ left: 0, behavior: "smooth" })
+      } else if (direction === "left" && currentScroll <= 10) {
+        container.scrollTo({ left: maxScroll, behavior: "smooth" })
+      } else {
+        const targetScroll = direction === "left"
+          ? currentScroll - scrollAmount
+          : currentScroll + scrollAmount
+        container.scrollTo({ left: targetScroll, behavior: "smooth" })
+      }
     }
   }
 
@@ -540,16 +545,8 @@ export function YouTubeGallerySection() {
     window.open(url, "_blank", "noopener,noreferrer")
   }
 
-  // Helper function to convert view strings to numbers for sorting
-  const parseViews = (viewStr: string): number => {
-    const num = parseFloat(viewStr)
-    if (viewStr.includes("M")) return num * 1000000
-    if (viewStr.includes("K")) return num * 1000
-    return num
-  }
-
-  // Sort videos by views in descending order
-  const sortedVideos = [...videos].sort((a, b) => parseViews(b.views) - parseViews(a.views))
+  // Use original video order
+  const sortedVideos = videos
 
   return (
     <section className="py-20 bg-background">
@@ -565,22 +562,22 @@ export function YouTubeGallerySection() {
             className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 lg:gap-8 mb-8"
           >
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-accent">51</div>
+              <div className="font-serif text-2xl sm:text-3xl lg:text-4xl font-semibold text-accent">51</div>
               <div className="text-sm sm:text-base text-muted-foreground mt-1">Episodes</div>
             </div>
             <div className="hidden sm:block w-px h-12 bg-border"></div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-accent">30M+</div>
+              <div className="font-serif text-2xl sm:text-3xl lg:text-4xl font-semibold text-accent">30M+</div>
               <div className="text-sm sm:text-base text-muted-foreground mt-1">Views</div>
             </div>
             <div className="hidden sm:block w-px h-12 bg-border"></div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-accent">1.17M+</div>
+              <div className="font-serif text-2xl sm:text-3xl lg:text-4xl font-semibold text-accent">1.17M+</div>
               <div className="text-sm sm:text-base text-muted-foreground mt-1">Likes</div>
             </div>
             <div className="hidden sm:block w-px h-12 bg-border"></div>
             <div className="text-center">
-              <div className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-accent">108K+</div>
+              <div className="font-serif text-2xl sm:text-3xl lg:text-4xl font-semibold text-accent">108K+</div>
               <div className="text-sm sm:text-base text-muted-foreground mt-1">Comments</div>
             </div>
           </motion.div>
@@ -600,9 +597,9 @@ export function YouTubeGallerySection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto"
+            className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto"
           >
-            In May 2022, I pitched a weekly political analysis show, got a yes, and built it from scratch — hosting and producing every episode for eight months.
+            In May 2022, I pitched a weekly political analysis show to Alexei Navalny, got a yes, and built it from scratch — hosting and producing every episode for eight months.
           </motion.p>
         </div>
       </div>

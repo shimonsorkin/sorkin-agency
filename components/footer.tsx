@@ -1,6 +1,5 @@
 import Link from "next/link"
 import { IconBrandLinkedin, IconBrandTwitter, IconBrandYoutube, IconMail } from "@tabler/icons-react"
-import { Play } from "lucide-react"
 
 export function Footer() {
   return (
@@ -10,10 +9,8 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-[rgba(10,10,10,0.14673913043478262)]">
-                <Play className="w-4 h-4 text-accent" />
-              </span>
-              <span className="font-serif text-xl font-bold">Sorkin Agency</span>
+              <img src="/sorkin-logo.svg" alt="Sorkin Agency" className="w-7 h-8" />
+              <span className="text-xl font-bold">Sorkin Agency</span>
             </div>
             <p className="text-muted-foreground leading-relaxed max-w-md">
               Strategic digital media consulting for media organizations and nonprofits. Helping mission-driven

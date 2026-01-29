@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/3d-button"
 import { IconArrowRight } from "@tabler/icons-react"
-import { Play } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function CTASection() {
@@ -25,9 +24,9 @@ export function CTASection() {
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[rgba(10,10,10,0.14673913043478262)] mb-6"
+              className="inline-flex items-center justify-center mb-6"
             >
-              <Play className="w-8 h-8 text-accent" />
+              <img src="/sorkin-logo.svg" alt="Sorkin Agency" className="w-14 h-16" />
             </motion.div>
 
             <motion.h2
