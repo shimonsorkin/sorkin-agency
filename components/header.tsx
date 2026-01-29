@@ -1,6 +1,14 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/3d-button"
 import { Play } from "lucide-react"
+
+declare global {
+  interface Window {
+    Calendly: any;
+  }
+}
 
 export function Header() {
   return (
@@ -31,7 +39,17 @@ export function Header() {
           </nav>
 
           {/* CTA Button */}
-          <Button className="rounded-full px-6">Schedule a Consultation</Button>
+          <Button
+            className="rounded-full px-6"
+            onClick={() => {
+              if (typeof window !== 'undefined' && window.Calendly) {
+                window.Calendly.initPopupWidget({url: 'https://calendly.com/shimonsorkin/30min'});
+              }
+              return false;
+            }}
+          >
+            Schedule a Consultation
+          </Button>
         </div>
       </div>
     </header>

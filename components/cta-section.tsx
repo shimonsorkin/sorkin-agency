@@ -5,6 +5,12 @@ import { IconArrowRight } from "@tabler/icons-react"
 import { Play } from "lucide-react"
 import { motion } from "framer-motion"
 
+declare global {
+  interface Window {
+    Calendly: any;
+  }
+}
+
 export function CTASection() {
   return (
     <section className="py-24 px-6 bg-secondary">
@@ -58,7 +64,17 @@ export function CTASection() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <Button size="lg" className="rounded-full" leadingIcon={IconArrowRight}>
+              <Button
+                size="lg"
+                className="rounded-full"
+                leadingIcon={IconArrowRight}
+                onClick={() => {
+                  if (typeof window !== 'undefined' && window.Calendly) {
+                    window.Calendly.initPopupWidget({url: 'https://calendly.com/shimonsorkin/30min'});
+                  }
+                  return false;
+                }}
+              >
                 Schedule a Consultation
               </Button>
               <Button size="lg" variant="outline" className="rounded-full bg-transparent">
