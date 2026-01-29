@@ -23,7 +23,7 @@ export function CaseStudiesSection() {
       project: "Video Content Strategy",
       metric: "10M+ views in 6 months",
       description: "Built end-to-end video content strategy including format development, SEO optimization, and distribution planning.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/channels4_profile (6).jpg",
     },
     {
       client: "Regional Media Network",
