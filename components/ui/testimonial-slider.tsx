@@ -12,6 +12,7 @@ export interface Testimonial {
   name: string
   role: string
   rating: number
+  imageClassName?: string
 }
 
 // Defines the props accepted by the TestimonialSlider component
@@ -83,11 +84,11 @@ export const TestimonialSlider = ({ testimonials, className }: TestimonialSlider
           >
             <div className="flex flex-col md:flex-row md:items-stretch items-center justify-center w-full h-full p-4">
               {/* Image Section */}
-              <div className="relative w-48 h-48 md:w-64 md:h-auto flex-shrink-0 mb-4 md:mb-0 md:mr-[-4rem] z-10 group">
+              <div className="relative w-48 h-48 md:w-64 md:h-auto flex-shrink-0 mb-4 md:mb-0 md:mr-[-4rem] z-10 group overflow-hidden rounded-2xl">
                 <img
                   src={currentTestimonial.image || "/placeholder.svg"}
                   alt={currentTestimonial.name}
-                  className="w-full h-full object-cover rounded-2xl shadow-lg grayscale group-hover:grayscale-0 transition-all duration-300"
+                  className={cn("w-full h-full object-cover rounded-2xl shadow-lg grayscale group-hover:grayscale-0 transition-all duration-300", currentTestimonial.imageClassName)}
                 />
               </div>
 

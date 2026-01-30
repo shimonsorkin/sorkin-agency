@@ -157,6 +157,36 @@
   animation: scroll-videos 360s linear infinite;
 }
 
+/* Case studies scroll animation (5 cards * 550px + 4 gaps * 24px = 2846px) */
+@keyframes scroll-cases {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-2846px));
+  }
+}
+
+/* Case studies speed matched: 2846px / 56.3s = ~50.6px/s (same as other scrollers) */
+.animate-scroll-cases {
+  animation: scroll-cases 56.3s linear infinite;
+}
+
+/* Services scroll animation (7 cards * 550px + 6 gaps * 24px = 3994px) */
+@keyframes scroll-services {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-3994px));
+  }
+}
+
+/* Services speed matched: 3994px / 78.9s = ~50.6px/s (same as other scrollers) */
+.animate-scroll-services {
+  animation: scroll-services 78.9s linear infinite;
+}
+
 /* Liquid Glass button - iOS style */
 .btn-liquid-glass {
   position: relative;

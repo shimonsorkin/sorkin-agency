@@ -4,25 +4,18 @@ const testimonials: Testimonial[] = [
   {
     image: "/navalny.webp",
     quote:
-      "Shimon's strategic guidance transformed our YouTube presence completely. His deep understanding of the platform and audience engagement helped us grow from 10K to 100K subscribers in under a year. He genuinely cares about mission-driven work.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     name: "Alexei Navalny",
     role: "Russian opposition leader and the most prominent critic of President Vladimir Putin",
     rating: 5,
   },
   {
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/natalia-arno.jpg",
+    imageClassName: "scale-125 object-[20%_20%]",
     quote:
-      "Working with Shimon gave us clarity on our social media strategy when we were spread too thin. His frameworks and training helped our small team punch above our weight and reach audiences we never thought possible.",
-    name: "Marcus Thompson",
-    role: "Communications Director, Environmental Nonprofit",
-    rating: 5,
-  },
-  {
-    image: "/placeholder.svg?height=400&width=400",
-    quote:
-      "Shimon doesn't just give advice—he partners with you to make it happen. His hands-on approach to content strategy and willingness to dive into the details made all the difference for our foundation's digital outreach.",
-    name: "Dr. Lisa Park",
-    role: "Executive Director, Educational Foundation",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    name: "Natalia Arno",
+    role: "Founder and President, Free Russia Foundation",
     rating: 5,
   },
 ]

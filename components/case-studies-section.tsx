@@ -1,8 +1,24 @@
 "use client"
 
+import { useState, useRef } from "react"
 import { motion } from "framer-motion"
+import { ChevronLeft, ChevronRight } from "lucide-react"
 
 export function CaseStudiesSection() {
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
+  const [isPaused, setIsPaused] = useState(false)
+
+  const scroll = (direction: "left" | "right") => {
+    if (!scrollContainerRef.current) return
+    const container = scrollContainerRef.current
+    const scrollAmount = 574 // card width (550) + gap (24)
+    if (direction === "right") {
+      container.scrollTo({ left: container.scrollLeft + scrollAmount, behavior: "smooth" })
+    } else {
+      container.scrollTo({ left: container.scrollLeft - scrollAmount, behavior: "smooth" })
+    }
+  }
+
   const caseStudies = [
     {
       client: "Russian Opposition Media",
@@ -36,12 +52,59 @@ export function CaseStudiesSection() {
       image: "/channels4_profile (7).jpg",
       url: "https://www.youtube.com/@SobolLyubov",
     },
+    {
+      client: "Think Tank",
+      project: "Podcast Production",
+      metric: "170K views. 12 episodes. All organic",
+      description: "We owned full podcast production for 12 episodes — research, scripting, filming, editing, and design — reaching 170,000 organic views.",
+      image: "/reformum-logo.png",
+      url: "https://www.youtube.com/playlist?list=PLRl3zYcXQYXA9YgyRzIWR7C2RwxRic6LB",
+    },
   ]
 
+  const renderCard = (study: typeof caseStudies[number], index: number, setKey: string) => {
+    const content = (
+      <>
+        <div className="aspect-[3/2] overflow-hidden">
+          <img
+            src={study.image || "/placeholder.svg"}
+            alt={study.project}
+            className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+          />
+        </div>
+        <div className="p-8">
+          <div className="text-sm font-semibold text-primary mb-2">{study.client}</div>
+          <h3 className="font-serif text-2xl font-bold mb-3">{study.project}</h3>
+          <div className="text-3xl font-bold text-primary mb-4">{study.metric}</div>
+          <p className="text-muted-foreground leading-relaxed">{study.description}</p>
+        </div>
+      </>
+    )
+
+    return (
+      <div key={`${setKey}-${index}`} className="flex-shrink-0 w-[550px]">
+        {study.url ? (
+          <a
+            href={study.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group block bg-secondary rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 cursor-pointer"
+          >
+            {content}
+          </a>
+        ) : (
+          <div className="group bg-secondary rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300">
+            {content}
+          </div>
+        )}
+      </div>
+    )
+  }
+
   return (
-    <section className="py-24 px-6 bg-background">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+    <section className="py-24 bg-background">
+      <div className="max-w-7xl mx-auto px-6 mb-16">
+        <div className="text-center">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -61,54 +124,45 @@ export function CaseStudiesSection() {
             Real results from media organizations and nonprofits we have partnered with.
           </motion.p>
         </div>
+      </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {caseStudies.map((study, index) => {
-            const content = (
-              <>
-                <div className="aspect-[3/2] overflow-hidden">
-                  <img
-                    src={study.image || "/placeholder.svg"}
-                    alt={study.project}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
-                  />
-                </div>
-                <div className="p-8">
-                  <div className="text-sm font-semibold text-primary mb-2">{study.client}</div>
-                  <h3 className="font-serif text-2xl font-bold mb-3">{study.project}</h3>
-                  <div className="text-3xl font-bold text-primary mb-4">{study.metric}</div>
-                  <p className="text-muted-foreground leading-relaxed">{study.description}</p>
-                </div>
-              </>
-            )
+      <div className="relative">
+        {/* Navigation Buttons */}
+        <button
+          onClick={() => scroll("left")}
+          className="absolute left-2 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background/90 border-2 border-border hover:border-accent shadow-lg flex items-center justify-center transition-all hover:scale-110"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        <button
+          onClick={() => scroll("right")}
+          className="absolute right-2 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-background/90 border-2 border-border hover:border-accent shadow-lg flex items-center justify-center transition-all hover:scale-110"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
 
-            return study.url ? (
-              <motion.a
-                key={index}
-                href={study.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group bg-secondary rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300 cursor-pointer"
+        <div
+          ref={scrollContainerRef}
+          className="overflow-x-auto scrollbar-hide"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          <div
+            className="relative flex"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
+          >
+            {/* Multiple sets for seamless infinite scroll */}
+            {Array.from({ length: 8 }).map((_, setIndex) => (
+              <div
+                key={`set-${setIndex}`}
+                className={`flex gap-6 animate-scroll-cases${setIndex > 0 ? ' ml-6' : ''}`}
+                aria-hidden={setIndex > 0 ? "true" : undefined}
               >
-                {content}
-              </motion.a>
-            ) : (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group bg-secondary rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300"
-              >
-                {content}
-              </motion.div>
-            )
-          })}
+                {caseStudies.map((study, index) => renderCard(study, index, `set${setIndex}`))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
