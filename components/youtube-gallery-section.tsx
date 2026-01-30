@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react"
 import { motion } from "framer-motion"
-import { Play, Eye, ThumbsUp, MessageCircle, ChevronLeft, ChevronRight } from "lucide-react"
+import { Eye, ThumbsUp, MessageCircle, ChevronLeft, ChevronRight } from "lucide-react"
 
 export function YouTubeGallerySection() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
@@ -38,86 +38,6 @@ export function YouTubeGallerySection() {
   }
 
   const videos = [
-    {
-      id: "idaZ2e4PScU",
-      title: "Украина разрабатывает дроны. Они достанут до Кремля — военный аналитик Ян Матвеев",
-      thumbnail: "https://img.youtube.com/vi/idaZ2e4PScU/maxresdefault.jpg",
-      views: "82K",
-      likes: "5.1K",
-      comments: "579",
-      isViral: false,
-      url: "https://youtu.be/idaZ2e4PScU",
-    },
-    {
-      id: "6gIBhBT6WpY",
-      title: "Вторая волна мобилизации будет еще хуже — Майкл Наки",
-      thumbnail: "https://img.youtube.com/vi/6gIBhBT6WpY/maxresdefault.jpg",
-      views: "619K",
-      likes: "25K",
-      comments: "2.5K",
-      isViral: false,
-      url: "https://youtu.be/6gIBhBT6WpY",
-    },
-    {
-      id: "SY6W_1fwIdA",
-      title: "Путин хочет, чтобы вы умирали за «Единую Россию» — Аббас Галлямов",
-      thumbnail: "https://img.youtube.com/vi/SY6W_1fwIdA/maxresdefault.jpg",
-      views: "103K",
-      likes: "6.3K",
-      comments: "691",
-      isViral: false,
-      url: "https://youtu.be/SY6W_1fwIdA",
-    },
-    {
-      id: "slu3jZJNWDI",
-      title: "Кремль выдумывает победы для Путина — военный аналитик Ян Матвеев",
-      thumbnail: "https://img.youtube.com/vi/slu3jZJNWDI/maxresdefault.jpg",
-      views: "173K",
-      likes: "7.9K",
-      comments: "705",
-      isViral: false,
-      url: "https://youtu.be/slu3jZJNWDI",
-    },
-    {
-      id: "Fy8yN9u0Ha0",
-      title: "Путин изолировался от правды — политолог Аббас Галлямов",
-      thumbnail: "https://img.youtube.com/vi/Fy8yN9u0Ha0/maxresdefault.jpg",
-      views: "383K",
-      likes: "17K",
-      comments: "1.8K",
-      isViral: false,
-      url: "https://youtu.be/Fy8yN9u0Ha0",
-    },
-    {
-      id: "4IVa9R9fNdY",
-      title: "Рубль стремительно падает. Что будет дальше? Экономист Сергей Алексашенко",
-      thumbnail: "https://img.youtube.com/vi/4IVa9R9fNdY/maxresdefault.jpg",
-      views: "758K",
-      likes: "22K",
-      comments: "1.7K",
-      isViral: false,
-      url: "https://youtu.be/4IVa9R9fNdY",
-    },
-    {
-      id: "O5EeqWgLDMM",
-      title: "Путин — лузер года. Политолог Майкл Наки",
-      thumbnail: "https://img.youtube.com/vi/O5EeqWgLDMM/maxresdefault.jpg",
-      views: "425K",
-      likes: "19K",
-      comments: "1.4K",
-      isViral: false,
-      url: "https://youtu.be/O5EeqWgLDMM",
-    },
-    {
-      id: "6fjs_HVzpqY",
-      title: "Зимой Путин попытается взять Киев? Военный аналитик Ян Матвеев",
-      thumbnail: "https://img.youtube.com/vi/6fjs_HVzpqY/maxresdefault.jpg",
-      views: "155K",
-      likes: "7.6K",
-      comments: "778",
-      isViral: false,
-      url: "https://youtu.be/6fjs_HVzpqY",
-    },
     {
       id: "RG2jC21zsVQ",
       title: "Какова реальная стоимость рубля? Экономист Сергей Алексашенко",
@@ -548,6 +468,86 @@ export function YouTubeGallerySection() {
       isViral: false,
       url: "https://youtu.be/3lTw8C6Wcu8",
     },
+    {
+      id: "6fjs_HVzpqY",
+      title: "Зимой Путин попытается взять Киев? Военный аналитик Ян Матвеев",
+      thumbnail: "https://img.youtube.com/vi/6fjs_HVzpqY/maxresdefault.jpg",
+      views: "155K",
+      likes: "7.6K",
+      comments: "778",
+      isViral: false,
+      url: "https://youtu.be/6fjs_HVzpqY",
+    },
+    {
+      id: "O5EeqWgLDMM",
+      title: "Путин — лузер года. Политолог Майкл Наки",
+      thumbnail: "https://img.youtube.com/vi/O5EeqWgLDMM/maxresdefault.jpg",
+      views: "425K",
+      likes: "19K",
+      comments: "1.4K",
+      isViral: false,
+      url: "https://youtu.be/O5EeqWgLDMM",
+    },
+    {
+      id: "4IVa9R9fNdY",
+      title: "Рубль стремительно падает. Что будет дальше? Экономист Сергей Алексашенко",
+      thumbnail: "https://img.youtube.com/vi/4IVa9R9fNdY/maxresdefault.jpg",
+      views: "758K",
+      likes: "22K",
+      comments: "1.7K",
+      isViral: false,
+      url: "https://youtu.be/4IVa9R9fNdY",
+    },
+    {
+      id: "Fy8yN9u0Ha0",
+      title: "Путин изолировался от правды — политолог Аббас Галлямов",
+      thumbnail: "https://img.youtube.com/vi/Fy8yN9u0Ha0/maxresdefault.jpg",
+      views: "383K",
+      likes: "17K",
+      comments: "1.8K",
+      isViral: false,
+      url: "https://youtu.be/Fy8yN9u0Ha0",
+    },
+    {
+      id: "slu3jZJNWDI",
+      title: "Кремль выдумывает победы для Путина — военный аналитик Ян Матвеев",
+      thumbnail: "https://img.youtube.com/vi/slu3jZJNWDI/maxresdefault.jpg",
+      views: "173K",
+      likes: "7.9K",
+      comments: "705",
+      isViral: false,
+      url: "https://youtu.be/slu3jZJNWDI",
+    },
+    {
+      id: "SY6W_1fwIdA",
+      title: "Путин хочет, чтобы вы умирали за «Единую Россию» — Аббас Галлямов",
+      thumbnail: "https://img.youtube.com/vi/SY6W_1fwIdA/maxresdefault.jpg",
+      views: "103K",
+      likes: "6.3K",
+      comments: "691",
+      isViral: false,
+      url: "https://youtu.be/SY6W_1fwIdA",
+    },
+    {
+      id: "6gIBhBT6WpY",
+      title: "Вторая волна мобилизации будет еще хуже — Майкл Наки",
+      thumbnail: "https://img.youtube.com/vi/6gIBhBT6WpY/maxresdefault.jpg",
+      views: "619K",
+      likes: "25K",
+      comments: "2.5K",
+      isViral: false,
+      url: "https://youtu.be/6gIBhBT6WpY",
+    },
+    {
+      id: "idaZ2e4PScU",
+      title: "Украина разрабатывает дроны. Они достанут до Кремля — военный аналитик Ян Матвеев",
+      thumbnail: "https://img.youtube.com/vi/idaZ2e4PScU/maxresdefault.jpg",
+      views: "82K",
+      likes: "5.1K",
+      comments: "579",
+      isViral: false,
+      url: "https://youtu.be/idaZ2e4PScU",
+    },
   ]
 
   const handleVideoClick = (url: string) => {
@@ -598,7 +598,7 @@ export function YouTubeGallerySection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal mb-6 leading-tight text-balance"
           >
-            <span className="text-accent">30 Million Views.</span> One Channel. 8 Months.
+            I Built a Show for Navalny That Got <span className="text-accent">30M Views</span>
           </motion.h2>
 
           <motion.p
@@ -663,11 +663,12 @@ export function YouTubeGallerySection() {
                           className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                         />
 
-                        {/* Play Overlay */}
-                        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
-                          <div className="w-20 h-20 rounded-full bg-accent/90 group-hover:bg-accent group-hover:scale-110 transition-all duration-300 flex items-center justify-center shadow-lg">
-                            <Play className="w-9 h-9 text-white ml-1 fill-current" />
-                          </div>
+                        {/* YouTube Play Button */}
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+                          <svg className="group-hover:scale-110 transition-transform duration-300 drop-shadow-lg " viewBox="0 0 68 48" width="68" height="48">
+                            <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74 .06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" style={{ fill: 'var(--accent)' }}/>
+                            <path d="M45 24L27 14v20z" fill="white"/>
+                          </svg>
                         </div>
                       </div>
 
@@ -725,11 +726,12 @@ export function YouTubeGallerySection() {
                           className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
                         />
 
-                        {/* Play Overlay */}
-                        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
-                          <div className="w-20 h-20 rounded-full bg-accent/90 group-hover:bg-accent group-hover:scale-110 transition-all duration-300 flex items-center justify-center shadow-lg">
-                            <Play className="w-9 h-9 text-white ml-1 fill-current" />
-                          </div>
+                        {/* YouTube Play Button */}
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+                          <svg className="group-hover:scale-110 transition-transform duration-300 drop-shadow-lg " viewBox="0 0 68 48" width="68" height="48">
+                            <path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74 .06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" style={{ fill: 'var(--accent)' }}/>
+                            <path d="M45 24L27 14v20z" fill="white"/>
+                          </svg>
                         </div>
                       </div>
 
