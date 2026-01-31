@@ -187,6 +187,21 @@
   animation: scroll-services 78.9s linear infinite;
 }
 
+/* Shorts scroll animation (14 cards * 400px + 13 gaps * 24px = 5912px) */
+@keyframes scroll-shorts {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-5936px));
+  }
+}
+
+/* Shorts speed matched: 5936px / 117.3s = ~50.6px/s (same as other scrollers) */
+.animate-scroll-shorts {
+  animation: scroll-shorts 117.3s linear infinite;
+}
+
 /* Liquid Glass button - iOS style */
 .btn-liquid-glass {
   position: relative;

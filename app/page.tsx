@@ -6,6 +6,7 @@ import { YouTubeGallerySection } from "@/components/youtube-gallery-section"
 import { StatsSection } from "@/components/stats-section"
 import { ServicesSection } from "@/components/services-section"
 import { CaseStudiesSection } from "@/components/case-studies-section"
+import { ShortsSection } from "@/components/shorts-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { ApproachSection } from "@/components/approach-section"
 import { PricingSection } from "@/components/pricing-section"
@@ -24,6 +25,7 @@ export default function Home() {
       <StatsSection />
       <ServicesSection />
       <CaseStudiesSection />
+      <ShortsSection />
       <TestimonialsSection />
       <ApproachSection />
       <PricingSection />

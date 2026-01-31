@@ -88,7 +88,7 @@ export const TestimonialSlider = ({ testimonials, className }: TestimonialSlider
                 <img
                   src={currentTestimonial.image || "/placeholder.svg"}
                   alt={currentTestimonial.name}
-                  className={cn("w-full h-full object-cover rounded-2xl shadow-lg grayscale group-hover:grayscale-0 transition-all duration-300", currentTestimonial.imageClassName)}
+                  className={cn("w-full h-full object-cover rounded-2xl shadow-lg grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500", currentTestimonial.imageClassName)}
                 />
               </div>
 
