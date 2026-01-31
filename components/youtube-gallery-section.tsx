@@ -558,7 +558,7 @@ export function YouTubeGallerySection() {
   const sortedVideos = videos
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-background border-t border-border">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">

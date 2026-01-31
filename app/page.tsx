@@ -1,7 +1,6 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { ClientLogos } from "@/components/client-logos"
-import { PortfolioShowcase } from "@/components/portfolio-showcase"
 import { YouTubeGallerySection } from "@/components/youtube-gallery-section"
 import { StatsSection } from "@/components/stats-section"
 import { ServicesSection } from "@/components/services-section"
@@ -19,7 +18,6 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <PortfolioShowcase />
       <YouTubeGallerySection />
       <ClientLogos />
       <StatsSection />
