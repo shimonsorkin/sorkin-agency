@@ -18,6 +18,38 @@ const testimonials: Testimonial[] = [
     role: "Founder and President, Free Russia Foundation",
     rating: 5,
   },
+  {
+    image: "/lyubov-sobol.jpg",
+    quote:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    name: "Lyubov Sobol",
+    role: "Lawyer and politician, Anti-Corruption Foundation (FBK)",
+    rating: 5,
+  },
+  {
+    image: "/vladimir-milov.jpg",
+    quote:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    name: "Vladimir Milov",
+    role: "Politician, former Deputy Minister of Energy of Russia",
+    rating: 5,
+  },
+  {
+    image: "/kara-murza.jpg",
+    quote:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    name: "Vladimir Kara-Murza",
+    role: "Politician, journalist, and Pulitzer Prize laureate",
+    rating: 5,
+  },
+  {
+    image: "/linor-goralik.jpg",
+    quote:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    name: "Linor Goralik",
+    role: "Writer, poet, and artist",
+    rating: 5,
+  },
 ]
 
 export function TestimonialsSection() {

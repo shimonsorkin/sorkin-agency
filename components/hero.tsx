@@ -4,23 +4,41 @@ import { Button } from "@/components/ui/3d-button"
 import { motion } from "framer-motion"
 
 export function Hero() {
+  const logos = [
+    { name: "Free Russia Foundation", src: "/logos/Free Russia Foundation Logo red.svg" },
+    { name: "MT Logo", src: "/logos/mt_logo2 (1).png" },
+    { name: "Anti-Corruption Foundation", src: "/logos/Logo_of_the_Anti-Corruption_Foundation_(2022).svg.png" },
+  ]
+
   return (
-    <section className="pt-32 pb-12 px-6">
-      <div className="container mx-auto max-w-5xl">
-        {/* Trust Metrics */}
+    <section className="relative min-h-screen flex flex-col items-center justify-center bg-[#0a0a0a] overflow-hidden">
+      {/* Background Graph */}
+      <div className="absolute inset-0">
+        <img
+          src="/hero-graph.png"
+          alt=""
+          className="w-full h-full object-cover opacity-50"
+        />
+        {/* Gradient overlays for depth */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-[#0a0a0a]/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-transparent to-transparent h-1/4" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto max-w-5xl px-6 text-center flex-1 flex flex-col justify-center">
+        {/* Tag */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex items-center justify-center gap-4 mb-8 text-sm text-muted-foreground"
+          className="flex items-center justify-center gap-2 mb-8"
         >
-          <span className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground" />
-            {"Free 30-minute consultation"}
-          </span>
-          <span className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground" />
-            {"Response within 24 hours"}
+          <svg viewBox="0 0 28 20" className="w-7 h-5 flex-shrink-0" fill="none">
+            <rect width="28" height="20" rx="4" fill="#FF0000"/>
+            <polygon points="11,5 11,15 20,10" fill="white"/>
+          </svg>
+          <span className="text-sm font-semibold tracking-[0.2em] uppercase text-white/80">
+            YouTube Growth Agency
           </span>
         </motion.div>
 
@@ -29,10 +47,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="font-serif text-4xl md:text-6xl lg:text-7xl font-normal text-center leading-[1.2] mb-6 [&>div]:whitespace-nowrap"
+          className="font-sans text-4xl md:text-6xl lg:text-7xl font-bold text-white text-center leading-[1.15] mb-8 uppercase tracking-tight"
         >
-          <div>I Grew a YouTube Channel to 30 Million Views.</div>
-          <div>I Can Help You Do the Same.</div>
+          I Grew a YouTube Channel to 30 Million Views. I Can Help You Build Yours.
         </motion.h1>
 
         {/* Sub-headline */}
@@ -40,9 +57,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed"
+          className="text-center text-lg md:text-xl text-white/60 max-w-4xl mx-auto mb-8 leading-normal"
         >
-          Full-service YouTube consulting for media organizations and nonprofits — from someone who's done it.
+          We help media organizations and nonprofits grow on YouTube — with strategy, production, and optimization that have driven millions of organic views.
         </motion.p>
 
         {/* CTA Button */}
@@ -62,6 +79,28 @@ export function Hero() {
           </Button>
         </motion.div>
       </div>
+
+      {/* Client Logos at bottom */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 1.2 }}
+        className="relative z-10 w-full border-t border-white/10 py-8 mt-auto"
+      >
+        <div className="container mx-auto px-6">
+          <div className="flex items-center justify-center gap-12 flex-wrap">
+            {logos.map((logo) => (
+              <div key={logo.name} className="flex items-center justify-center h-8 opacity-40 grayscale brightness-200 hover:opacity-80 transition-all duration-300">
+                <img
+                  src={logo.src || "/placeholder.svg"}
+                  alt={logo.name}
+                  className="h-full w-auto"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
     </section>
   )
 }

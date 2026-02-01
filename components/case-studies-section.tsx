@@ -76,7 +76,7 @@ export function CaseStudiesSection() {
           <div className="text-sm font-semibold text-primary mb-2">{study.client}</div>
           <h3 className="font-serif text-2xl font-bold mb-3">{study.project}</h3>
           <div className="text-3xl font-bold text-primary mb-4">{study.metric}</div>
-          <p className="text-muted-foreground leading-relaxed">{study.description}</p>
+          <p className="text-muted-foreground leading-normal">{study.description}</p>
         </div>
       </>
     )

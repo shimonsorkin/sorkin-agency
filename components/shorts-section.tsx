@@ -210,7 +210,7 @@ export function ShortsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal mb-6 leading-tight text-balance"
+            className="font-serif text-4xl md:text-5xl font-bold mb-6 leading-tight text-balance"
           >
             Shorts
           </motion.h2>
@@ -219,7 +219,7 @@ export function ShortsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto"
+            className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
             Short-form vertical content that captures attention and drives engagement.
           </motion.p>

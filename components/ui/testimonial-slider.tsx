@@ -95,7 +95,7 @@ export const TestimonialSlider = ({ testimonials, className }: TestimonialSlider
               {/* Text & Controls Section */}
               <div className="relative w-full bg-card text-card-foreground rounded-2xl shadow-xl pt-8 md:pt-4 pl-4 md:pl-24 pr-4 pb-4">
                 <Quote className="absolute top-4 left-4 h-8 w-8 text-accent/20" aria-hidden="true" />
-                <blockquote className="text-sm md:text-base mb-4 leading-relaxed font-sans">
+                <blockquote className="text-sm md:text-base mb-4 leading-normal font-sans">
                   {currentTestimonial.quote}
                 </blockquote>
                 <StarRating rating={currentTestimonial.rating} className="mb-4" />

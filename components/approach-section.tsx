@@ -46,7 +46,7 @@ export function ApproachSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="font-serif text-5xl md:text-6xl mb-6 text-balance"
+            className="font-serif text-4xl md:text-5xl font-bold mb-6 text-balance"
           >
             Our Approach
           </motion.h2>
@@ -88,8 +88,8 @@ export function ApproachSection() {
                   className={`flex-1 ${index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16 md:text-left"} md:w-1/2`}
                 >
                   <div className="bg-secondary p-8 rounded-2xl border border-border hover:border-primary/50 transition-colors">
-                    <h3 className="font-serif text-2xl md:text-3xl mb-4">{step.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{step.description}</p>
+                    <h3 className="font-serif text-2xl font-bold mb-4">{step.title}</h3>
+                    <p className="text-muted-foreground leading-normal">{step.description}</p>
                   </div>
                 </div>
 

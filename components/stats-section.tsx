@@ -12,7 +12,7 @@ export function StatsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8 }}
-          className="font-serif text-4xl md:text-5xl lg:text-6xl text-center mb-16 leading-tight text-balance"
+          className="font-serif text-4xl md:text-5xl font-bold text-center mb-16 leading-tight text-balance"
         >
           <span className="text-accent">Building audiences</span>, amplifying missions, and{" "}
           <span className="text-accent">driving engagement</span>. Let&apos;s tell your story together.
@@ -33,7 +33,7 @@ export function StatsSection() {
               <span className="text-accent text-5xl md:text-6xl font-serif font-bold">M+</span>
             </div>
             <h3 className="font-serif text-2xl font-semibold mb-4">Views Generated</h3>
-            <p className="text-muted-foreground font-sans leading-relaxed">
+            <p className="text-muted-foreground font-sans leading-normal">
               Our strategies have helped clients reach over 50 million views across YouTube and social platforms.
             </p>
           </motion.div>
@@ -51,7 +51,7 @@ export function StatsSection() {
               <span className="text-accent text-5xl md:text-6xl font-serif font-bold">%</span>
             </div>
             <h3 className="font-serif text-2xl font-semibold mb-4">Subscriber Growth</h3>
-            <p className="text-muted-foreground font-sans leading-relaxed">
+            <p className="text-muted-foreground font-sans leading-normal">
               Average subscriber growth for clients who implement our YouTube strategy recommendations.
             </p>
           </motion.div>
@@ -69,7 +69,7 @@ export function StatsSection() {
               <span className="text-accent text-5xl md:text-6xl font-serif font-bold">+</span>
             </div>
             <h3 className="font-serif text-2xl font-semibold mb-4">Organizations Served</h3>
-            <p className="text-muted-foreground font-sans leading-relaxed">
+            <p className="text-muted-foreground font-sans leading-normal">
               Media organizations and nonprofits trust us to elevate their digital presence and impact.
             </p>
           </motion.div>

@@ -19,7 +19,6 @@ export default function Home() {
       <Header />
       <Hero />
       <YouTubeGallerySection />
-      <ClientLogos />
       <StatsSection />
       <ServicesSection />
       <CaseStudiesSection />

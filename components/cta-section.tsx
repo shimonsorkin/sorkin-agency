@@ -44,7 +44,7 @@ export function CTASection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed"
+              className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-normal"
             >
               We drove 30M views organically. To buy those views with ads would cost you $1.5M. I will build you that engine for $12k/month.
             </motion.p>

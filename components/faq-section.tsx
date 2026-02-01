@@ -95,7 +95,7 @@ export function FAQSection() {
                   animate={{ opacity: 1, height: "auto" }}
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="px-6 pb-5 text-muted-foreground leading-relaxed"
+                  className="px-6 pb-5 text-muted-foreground leading-normal"
                 >
                   {faq.answer}
                 </motion.div>

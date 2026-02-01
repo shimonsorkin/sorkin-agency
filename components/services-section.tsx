@@ -86,7 +86,7 @@ export function ServicesSection() {
           <div className="text-sm font-semibold text-primary mb-2">{service.client}</div>
           <h3 className="font-serif text-2xl font-bold mb-3">{service.project}</h3>
           <div className="text-3xl font-bold text-primary mb-4">{service.metric}</div>
-          <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+          <p className="text-muted-foreground leading-normal">{service.description}</p>
         </div>
       </>
     )

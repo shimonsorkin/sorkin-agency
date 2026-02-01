@@ -97,7 +97,7 @@ export function PricingSection() {
                 <span className="text-4xl font-bold">{plan.price}</span>
                 <span className="text-muted-foreground ml-2">{plan.period}</span>
               </div>
-              <p className="text-muted-foreground mb-6 leading-relaxed">{plan.description}</p>
+              <p className="text-muted-foreground mb-6 leading-normal">{plan.description}</p>
               <Button stretch className="mb-6 rounded-full">
                 Get Started
               </Button>

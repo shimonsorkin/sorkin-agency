@@ -596,7 +596,7 @@ export function YouTubeGallerySection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal mb-6 leading-tight text-balance"
+            className="font-serif text-4xl md:text-5xl font-bold mb-6 leading-tight text-balance"
           >
             I Built a Show for Navalny That Got <span className="text-accent">30M Views</span>
           </motion.h2>
@@ -606,7 +606,7 @@ export function YouTubeGallerySection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto"
+            className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
             In May 2022, I pitched a weekly political analysis show to Alexei Navalny, got a yes, and built it from scratch — hosting and producing every episode for eight months.
           </motion.p>

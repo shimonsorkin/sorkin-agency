@@ -12,7 +12,7 @@ export function Footer() {
               <img src="/sorkin-logo.svg" alt="Sorkin Agency" className="w-7 h-8" />
               <span className="text-xl font-bold">Sorkin Agency</span>
             </div>
-            <p className="text-muted-foreground leading-relaxed max-w-md">
+            <p className="text-muted-foreground leading-normal max-w-md">
               Strategic digital media consulting for media organizations and nonprofits. Helping mission-driven
               organizations grow their audience and amplify their impact.
             </p>
