@@ -2,12 +2,15 @@
 
 import { Button } from "@/components/ui/3d-button"
 import { motion } from "framer-motion"
+import { ArrowRight } from "lucide-react"
 
 export function Hero() {
   const logos = [
-    { name: "Free Russia Foundation", src: "/logos/Free Russia Foundation Logo red.svg" },
-    { name: "MT Logo", src: "/logos/mt_logo2 (1).png" },
-    { name: "Anti-Corruption Foundation", src: "/logos/Logo_of_the_Anti-Corruption_Foundation_(2022).svg.png" },
+    { name: "Free Russia Foundation", src: "/logos/free-russia-foundation.svg", height: "h-12" },
+    { name: "MT Logo", src: "/logos/moscow-times.svg", height: "h-10" },
+    { name: "Reforum", src: "/logos/reformspace-logo.svg", height: "h-8" },
+    { name: "Ульпан.Политика", src: "/sorkin-logo-white.svg", height: "h-8" },
+    { name: "Anti-Corruption Foundation", src: "/logos/Logo_of_the_Anti-Corruption_Foundation_(2022).svg.png", height: "h-10" },
   ]
 
   return (
@@ -17,15 +20,15 @@ export function Hero() {
         <img
           src="/hero-graph.png"
           alt=""
-          className="w-full h-full object-cover opacity-50"
+          className="w-full h-full object-cover object-bottom opacity-50"
         />
         {/* Gradient overlays for depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-[#0a0a0a]/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/80 via-[#0a0a0a]/30 to-[#0a0a0a]/60" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-transparent to-transparent h-1/4" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto max-w-5xl px-6 text-center flex-1 flex flex-col justify-center">
+      <div className="relative z-10 container mx-auto max-w-7xl px-6 text-center flex-1 flex flex-col justify-center">
         {/* Tag */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -49,7 +52,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="font-sans text-4xl md:text-6xl lg:text-7xl font-bold text-white text-center leading-[1.15] mb-8 uppercase tracking-tight"
         >
-          I Grew a YouTube Channel to 30 Million Views. I Can Help You Build Yours.
+          I Grew a YouTube Channel to 30 Million Views. I Can Help You Build Yours
         </motion.h1>
 
         {/* Sub-headline */}
@@ -57,7 +60,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center text-lg md:text-xl text-white/60 max-w-4xl mx-auto mb-8 leading-normal"
+          className="text-center text-xl md:text-2xl text-white max-w-4xl mx-auto mb-8 leading-normal"
         >
           We help media organizations and nonprofits grow on YouTube — with strategy, production, and optimization that have driven millions of organic views.
         </motion.p>
@@ -71,36 +74,35 @@ export function Hero() {
         >
           <Button
             size="lg"
-            className="rounded-full px-8 text-base"
+            className="rounded-full px-12 py-4 h-14 text-lg hover:bg-white hover:text-black hover:border-white hover:border-b-white transition-all duration-300"
             data-cal-link="shimon-sorkin-zh2q7b/30min"
             data-cal-config='{"layout":"month_view"}'
           >
-            Schedule a Consultation
+            <span className="uppercase">See How We Do It</span>
+            <ArrowRight className="w-5 h-5 ml-1" />
           </Button>
         </motion.div>
-      </div>
 
-      {/* Client Logos at bottom */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
-        className="relative z-10 w-full border-t border-white/10 py-8 mt-auto"
-      >
-        <div className="container mx-auto px-6">
-          <div className="flex items-center justify-center gap-12 flex-wrap">
+        {/* Client Logos */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="mt-28"
+        >
+          <div className="flex items-center justify-center gap-10">
             {logos.map((logo) => (
-              <div key={logo.name} className="flex items-center justify-center h-8 opacity-40 grayscale brightness-200 hover:opacity-80 transition-all duration-300">
+              <div key={logo.name} className="flex items-center justify-center opacity-40 brightness-0 invert hover:opacity-80 transition-all duration-300">
                 <img
                   src={logo.src || "/placeholder.svg"}
                   alt={logo.name}
-                  className="h-full w-auto"
+                  className={`${logo.height} w-auto object-contain`}
                 />
               </div>
             ))}
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </section>
   )
 }
